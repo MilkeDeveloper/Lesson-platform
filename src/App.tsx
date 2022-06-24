@@ -1,18 +1,20 @@
-import { gql, useQuery } from "@apollo/client"
-import { Hearder } from "./components/Header"
-import { Lesson } from "./components/Lesson"
-import { Sidebar } from "./components/Sidebar"
-import { Video } from "./components/Video"
-import { Event } from "./pages/Event"
+import { ApolloProvider, gql, useQuery } from "@apollo/client"
+import { BrowserRouter } from "react-router-dom"
+
+import { Router } from "./components/Router"
+
+import { client } from "./lib/apollo"
 
 
 function App() {
   
 
   return (
-    <div>
-      <Event />
-    </div>
+    <ApolloProvider client={client}>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>  
+    </ApolloProvider>
   )
 }
 
