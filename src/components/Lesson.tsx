@@ -22,8 +22,8 @@ export function Lesson(props: LessonProps) {
             <span className="text-gray-300">
                 {availableAtDateFormated}
             </span>
-            <div className="rounded border border-gray-500 p-4 mt-2 group-hover:border-yellow-500">
-                <header className="flex itens-center justify-between">
+            <div className=" rounded border border-gray-500 p-4 mt-2 group-active:bg-yellow-300 transition-colors duration-300 group-hover:border-yellow-500">
+                <header className=" flex itens-center justify-between">
                     {isAvailableAt ? (
                         <span className="text-sm text-blue-500 font-medium flex items-center gap-2">
                             <CheckCircle size={20} />
@@ -37,7 +37,7 @@ export function Lesson(props: LessonProps) {
                     )} 
                     
                     {props.type == 'live' ? (
-                    <span className="text-xs rounded py-[0.125rem] px-2 text-white border border-yellow-500 font-bold">
+                    <span className="text-xs rounded py-[0.125rem] px-2 text-red-700 border border-red-700 font-bold">
                         AO VIVO
                     </span> ) : (
                     <span className="text-xs rounded py-[0.125rem] px-2 text-white border border-orange-500 font-bold">

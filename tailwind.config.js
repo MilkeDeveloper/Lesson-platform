@@ -33,6 +33,10 @@ module.exports = {
           900: '#09090A'
         }
       },
+      screens: {
+        '4xl': '2000px',
+        // => @media (min-width: 1280px) { ... }
+      },
     },
   },
   plugins: [],
